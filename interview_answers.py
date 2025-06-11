@@ -75,6 +75,19 @@ connection.commit()
 cursor.close()
 connection.close()
 
+# Question seven:
+lst = [1,2,3,4,5,6,7,8,9,12,34,56,78,90]
+
+def findVal(num,index=0):
+    if lst[index] == num:
+        return (f"Found {num} at {lst.index(num)}")
+    if index >= len(lst):
+        return ("not found")
+    return findVal(num,index + 1)
+
+print(findVal(5))
+print("\n")
+
 # Question eight:
 def generate_rand():
     digits=""
